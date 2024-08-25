@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>-->
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Yug Pratap</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <video autoplay muted loop id="bg-video">
+            <source src="background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <div class="profile-photo">
+                <img src="myphoto.jpg" alt="Your Photo">
+            </div>
+            <h1>Yug Pratap</h1>
+            <h2>Full Stack Developer | Automation Expert</h2>
+            <div id="3d-container"></div>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h3>About Me</h3>
+            <p>
+                Hi, I'm Yug Pratap, a passionate Full Stack Developer and Automation Expert with a knack for crafting efficient, scalable web applications. I thrive on integrating diverse technologies to automate workflows and deliver top-tier solutions. With expertise in AWS, Python, Docker, Linux, and Full Stack Development, I constantly seek to push the boundaries of what's possible in software development.
+            </p>
+            <p>
+                My journey in tech has been driven by a deep curiosity and a commitment to continuous learning. Over the years, I've led and contributed to projects that not only meet the technical requirements but also create meaningful value for businesses and users alike. My approach is rooted in best practices, ensuring that the solutions I build are both innovative and robust.
+            </p>
+            <p>
+                Beyond coding, I’m deeply interested in the latest tech trends, contributing to open-source projects, and exploring ways to make technology more accessible and impactful. Whether it's collaborating on cutting-edge projects or diving into a new book, I'm always on the lookout for the next challenge that will allow me to grow and contribute.
+            </p>
+            
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h3>Skills</h3>
+            <div class="skill-list">
+                <div class="skill">AWS</div>
+                <div class="skill">Python</div>
+                <div class="skill">Docker</div>
+                <div class="skill">Linux</div>
+                <div class="skill">Full Stack Development</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="filter-buttons">
+            <button class="btn active" data-filter="all">All</button>
+            <button class="btn" data-filter="aws">AWS Services</button>
+            <button class="btn" data-filter="python">Python</button>
+            <button class="btn" data-filter="fullstack">Full-Stack</button>
+            <button class="btn" data-filter="linux">Linux</button>
+            <button class="btn" data-filter="docker">Docker Automation</button>
+        </div>
+        <div class="project-grid">
+            <!-- Send Text Message Project -->
+            <div class="project-card" data-category="python">
+                <h3>Send Text Message</h3>
+                <img class="text" src="images/comments.png" alt="Send Text Message">
+                <button class="api-button" onclick="showInputForm()">Send Text Message</button>
+            </div>
+
+            <!-- Send WhatsApp Message Project -->
+            <div class="project-card" data-category="python">
+                <h3>Send WhatsApp Message</h3>
+                <img class="text" src="images/whatsapp.png" alt="Send WhatsApp Message">
+                <button class="api-button" onclick="showWhatsappForm()">Send WhatsApp Message</button>
+            </div>
+
+            <!-- Make a Phone Call Project -->
+            <div class="project-card" data-category="python">
+                <h3>Make a Phone Call</h3>
+                <img class="text" src="images/apple.png" alt="Make a Phone Call">
+                <button class="api-button" onclick="showPhoneCallForm()">Make a Phone Call</button>
+            </div>
+
+            <!-- Instagram Photo Post Project -->
+            <div class="project-card" data-category="python">
+                <h3>Post Instagram Photo</h3>
+                <img class="text" src="images/social.png" alt="Post Instagram Photo">
+                <button class="api-button" onclick="showInstagramForm()">Post Photo</button>
+            </div>
+            <!--click a photo-->
+            <div class="project-card" data-category="python">
+                <h3>Capture Photo</h3>
+                <img class="text" src="images/capture_photo.png" alt="Capture Photo">
+                <button class="api-button" onclick="showCapturePhotoForm()">Capture Photo</button>
+            </div> 
+            
+            
+            <!--Send mail-->
+            <div class="project-card" data-category="python">
+                <h3>Send Email</h3>
+                <img class="text" src="images/gmail.png" alt="Send Email">
+                <button class="api-button" onclick="showEmailForm()">Send Email</button>
+            </div>
+              <!-- Schedule Email Project -->
+              <div class="project-card" data-category="python">
+                <h3>Schedule an Email</h3>
+                <img class="text" src="images/e-mail.png" alt="Schedule Email">
+                <button class="api-button" onclick="showScheduleEmailForm()">Schedule Email</button>
+            </div>
+              
+            <!-- Google search query -->
+            <div class="project-card" data-category="python">
+                <h3>Search query</h3>
+                <img class="text" src="images/search.png" alt="Search query">
+                <button class="api-button" onclick="showGoogleSearchForm()">Search</button>
+            </div>
+            <!-- Text-to-Speech Project Card -->
+            <div class="project-card" data-category="python">
+                <h3>Text to Speech</h3>
+                <img class="text" src="images/text-to-speech.png" alt="Text to Speech">
+                <button class="api-button" onclick="showTextToSpeechForm()">Convert to Speech</button>
+            </div>
+            <!--image filter-->
+            <div class="project-card" data-category="python">
+                <img class="text" src="images/image.png" alt="apply filters">
+                <h3>Image Filter</h3>
+                <button class="api-button" onclick="startImageFilter()">Start Image Filter</button>
+            </div>
+            <div id="filter-response"></div>
+             <!-- form section form click photo and send email -->
+            <div class="project-card" data-category="python">
+                <h3>Capture Photo and Send Email</h3>
+                <img class="text" src="images/camera.png" alt="Capture Photo">
+                <button class="api-button" onclick="showCapturePhotoForm()">Capture & Send</button>
+            </div>
+             <!-- form section click pic in instafram-->
+            <div class="project-card" data-category="python">
+                <h3>Upload Instagram Photo</h3>
+                <img class="text" src="images/instagram-post.png" alt="Upload Instagram Photo">
+                <button class="api-button" onclick="showInstagramUploadForm()">Upload Photo</button>
+            </div>
+             <!-- form section for image filter-->
+            <div class="project-card" data-category="python">
+                <h3>Image Filters</h3>
+                <img class="text" src="images/filter.png" alt="Image Filters">
+                <button class="api-button" onclick="showImageFilterForm()">Apply Image Filters</button>
+            </div>
+            
+            <!-- form section for speech to text-->
+
+            <div class="project-card" data-category="python">
+                <h3>Speech to Text</h3>
+                <img class="text" src="images/speaking.png" alt="Speech to Text">
+                <button class="api-button" onclick="showSpeechToTextForm()">Speech to Text</button>
+            </div>
+            <!-- live face Crop-->
+            <div class="project-card" data-category="python">
+                <h3>Live Video Capture & Face Crop</h3>
+                <img class="text" src="images/editing.png" alt="Live Video Capture & Face Crop">
+                <button class="api-button" onclick="startLiveVideoCapture()">Live Video Capture & Face Crop</button>
+            </div>
+             <!-- form section for live face crop-->
+            <div class="live-capture-container" style="display:none;">
+                <h3>Live Video Capture & Face Crop</h3>
+                <p id="live-capture-message"></p>
+                <button onclick="goBack()">Back to Projects</button>
+            </div>
+
+            <!-- Chat via AI21 GPT Model -->
+            
+            <div class="project-card" data-category="ai">
+                <h3>ChatGPT with AI21</h3>
+                <img class="text" src="images/chat-gpt.png" alt="ChatGPT with AI21">
+                <button class="api-button" onclick="showChatForm()">Start Chat</button>
+            </div>
+            
+            
+
+            <!-- AWS Services Project Card -->
+            <div class="project-card" data-category="aws">
+                <h3>AWS Services</h3>
+                <img class="text" src="images/web.png" alt="AWS Services">
+                <button class="api-button" onclick="showAwsLaunchForm()">Launch EC2 Instance</button>
+            </div>
+            <!--python program in docker-->
+            <div class="project-card" data-category="docker">
+                <h3>Run Python Program in Docker</h3>
+                <img class="text" src="images/docker.png" alt="Run Python Program in Docker">
+                <button class="api-button" onclick="showDockerForm()">Run Program</button>
+            </div>
+             <!-- form section for launch web server-->
+            <div class="project-card" data-category="docker">
+                <h3>Launch Web Server</h3>
+                <img class="text" src="images/docker.png" alt="Launch Web Server">
+                <button class="api-button" onclick="launchWebServer()">Launch Web Server</button>
+            </div>
+             <!-- form section for run train-->
+            <div class="project-card" data-category="linux">
+                <h3>Run Train</h3>
+                <img class="text" src="images/train.png" alt="Run Train">
+                <button class="api-button" onclick="runTrain()">Run Train</button>
+            </div>
+             <!-- form section for vlc launch in linux-->
+            <div class="project-card" data-category="linux">
+                <h3>Launch VLC Stream</h3>
+                <img class="text" src="images/player.png" alt="Launch VLC Stream">
+                <button class="api-button" onclick="showVLCForm()">Launch VLC Streaming</button>
+            </div>
+             <!--form section for capture and transfer photo in linux-->
+            <div class="project-card" data-category="linux">
+                <h3>Photo Capture and Transfer</h3>
+                <img class="text" src="images/linux cam.png" alt="Photo Capture and Transfer">
+                <button class="api-button" onclick="showPhotoCaptureForm()">Capture and Transfer Photo</button>
+            </div>
+            <!-- form sectiom for live camera streming in linux-->
+            <div class="project-card" data-category="linux">
+                <h3>Live Camera Streaming</h3>
+                <img class="text" src="images/live straming linux.png" alt="Live Camera Streaming">
+                <button class="api-button" onclick="showLiveStreamingForm()">Start Live Streaming</button>
+            </div>
+            <!--form section for linux shortcut command -->
+            <div class="project-card" data-category="linux">
+                <h3>Find Linux Shortcut Command</h3>
+                <img class="text" src="images/command.png" alt="Find Linux Shortcut Command">
+                <button class="api-button" onclick="showShortcutForm()">Find Shortcut</button>
+            </div>
+             <!-- form section Modify the Speed and Voice of the espeak Command in Linux-->
+            <div class="project-card" data-category="linux">
+                <h3>Modify espeak Command</h3>
+                <img class="text" src="images/espeak.png" alt="Modify espeak Command">
+                <button class="api-button" onclick="showEspeakForm()">Modify espeak</button>
+            </div>
+            <!--chating with ping command-->
+            <div class="project-card" data-category="linux">
+                <h3>Chat via Ping Command</h3>
+                <img class="text" src="images/ping.png" alt="Chat via Ping Command">
+                <button class="api-button" onclick="showPingForm()">Start Chat</button>
+            </div>
+            <div class="project-card" data-category="fullstack">
+                <h3>Webcam Photo Capture</h3>
+                <img class="text" src="images/camera.png" alt="Webcam Photo Capture">
+                <button class="api-button" onclick="showPhotoCaptureForm()">Capture Photo</button>
+            </div>
+            <!--full stack java script photo capture-->
+            <div class="photos-capture-container">
+                <h2>Capture Photo with Webcam</h2>
+                
+                <!-- Video stream from webcam -->
+                <video id="video" autoplay></video>
+                
+                <!-- Canvas to display captured photo -->
+                <canvas id="canvas"></canvas>
+                
+                <!-- Buttons to capture and reset photo -->
+                <div>
+                    <button id="snap" class="btn">Capture Photo</button>
+                    <button class="btn" onclick="resetCapture()">Reset</button>
+                    <button class="btn" onclick="goBack()">Back to Projects</button>
+                </div>
+                
+                <!-- Confirmation message after capturing photo -->
+                <div class="confirmation-message" id="photo-capture-confirmation-message"></div>
+            </div>
+
+        </div>
+    </section>
+    
+
+    <!-- Input Form Section for SMS -->
+    <section id="send-message" class="input-container">
+        <h2>Send Text Message</h2>
+        <div>
+            <input type="text" id="sms-message" placeholder="Enter your message here">
+            <input type="text" id="sms-recipient" placeholder="Enter recipient number">
+            <button class="api-button" onclick="sendTextMessage()">Send Text Message</button>
+        </div>
+        <div class="confirmation-message" id="confirmation-message"></div>
+        <button class="api-button" onclick="goBack()">Back to Projects</button>
+    </section>
+    
+
+   <!-- WhatsApp Message Form -->
+   <div class="whatsapp-container">
+        <h3>Send a WhatsApp Message</h3>
+        <input type="text" id="whatsapp-recipient" placeholder="Recipient's Number">
+        <input type="text" id="whatsapp-template-name" placeholder="Template Name">
+        <input type="text" id="whatsapp-placeholder" placeholder="Placeholder Value">
+        <button onclick="sendWhatsAppMessage()">Send</button>
+        <p id="whatsapp-confirmation-message"></p>
+        <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+    <!-- Input Form Section for Phone Call -->
+    <section id="make-phonecall" class="phonecall-container">
+        <h2>Make a Phone Call</h2>
+        <div>
+            <input type="text" id="call-recipient" placeholder="Enter recipient number">
+            <button class="api-button" onclick="makePhoneCall()">Make a Call</button>
+        </div>
+        <div class="confirmation-message" id="phonecall-confirmation-message"></div>
+        <button class="api-button" onclick="goBack()">Back to Projects</button>
+    </section>
+
+    <!-- Input Form Section for Instagram Photo -->
+    <section id="post-instagram" class="instagram-container">
+        <h2>Post Instagram Photo</h2>
+        <div>
+            <input type="text" id="instagram-username" placeholder="Enter Instagram username">
+            <input type="password" id="instagram-password" placeholder="Enter Instagram password">
+            <input type="text" id="instagram-caption" placeholder="Enter caption">
+            <input type="file" id="instagram-photo" accept="image/*">
+            <button class="api-button" onclick="postInstagramPhoto()">Post Photo</button>
+        </div>
+        <div class="confirmation-message" id="instagram-confirmation-message"></div>
+        <button class="api-button" onclick="goBack()">Back to Projects</button>
+    </section>
+     <!-- Input Form Section for Email -->
+     <section id="send-email" class="email-container">
+        <h2>Send Email</h2>
+        <div>
+            <input type="password" id="email-password" placeholder="Enter your email password">
+            <input type="text" id="receiver-email" placeholder="Enter receiver email">
+            <input type="text" id="email-subject" placeholder="Enter email subject">
+            <textarea id="email-message" placeholder="Enter your message here"></textarea>
+            <button class="api-button" onclick="sendEmail()">Send Email</button>
+        </div>
+        <div class="confirmation-message" id="email-confirmation-message"></div>
+        <button class="api-button" onclick="goBack()">Back to Projects</button>
+    </section>
+     <!-- Input Form Section for Scheduling Email -->
+     <section id="schedule-email" class="schedule-container">
+        <h2>Schedule an Email</h2>
+        <div>
+            <input type="email" id="schedule-email-recipient" placeholder="Enter receiver's email">
+            <input type="text" id="schedule-email-subject" placeholder="Enter subject">
+            <textarea id="schedule-email-message" placeholder="Enter your message here"></textarea>
+            <input type="time" id="schedule-email-time" placeholder="Enter schedule time (HH:MM)">
+            <button class="api-button" onclick="scheduleEmail()">Schedule Email</button>
+        </div>
+        <div class="confirmation-message" id="schedule-email-confirmation-message"></div>
+        <button class="api-button" onclick="goBack()">Back to Projects</button>
+    </section>
+     <!-- Input Form Section for Google Search -->
+     <section id="google-search" class="google-search-container">
+        <h2>Google Search</h2>
+        <div>
+            <input type="text" id="google-query" placeholder="Enter your search query">
+            <input type="number" id="google-results" placeholder="Number of results" value="5" min="1">
+            <button class="api-button" onclick="performGoogleSearch()">Search</button>
+        </div>
+        <div class="search-results" id="search-results"></div>
+        <button class="api-button" onclick="goBack()">Back to Projects</button>
+    </section>
+    <!-- Text-to-Speech Form -->
+    <section id="text-to-speech" class="text-to-speech-container">
+        <h2>Text to Speech</h2>
+        <div>
+            <textarea id="text-to-speech-input" placeholder="Enter text to convert to speech"></textarea>
+            <button class="api-button" onclick="convertTextToSpeech()">Convert to Speech</button>
+        </div>
+        <div class="confirmation-message" id="text-to-speech-confirmation-message"></div>
+        <button class="api-button" onclick="goBack()">Back to Projects</button>
+    </section>
+    <!-- Input Form Section for Capturing Photo and Sending Email -->
+    <section id="send-photo-email" class="capture-photo-container">
+        <h2>Capture Photo and Send Email</h2>
+        <div>
+            <input type="email" id="sender-email" placeholder="Enter your Gmail">
+            <input type="password" id="sender-password" placeholder="Enter your Gmail password">
+            <input type="email" id="receiver-email" placeholder="Enter receiver's email">
+            <button class="api-button" onclick="captureAndSendEmail()">Capture Photo & Send Email</button>
+        </div>
+        <div class="confirmation-message" id="email-confirmation-message"></div>
+        <button class="api-button" onclick="goBack()">Back to Projects</button>
+    </section>
+    <!-- Input Form Section for Instagram Photo Upload -->
+    <section id="instagram-upload-form" class="instagram-upload-container" style="display: none;">
+        <h2>Post Instagram Photo</h2>
+        <div>
+            <input type="text" id="instagram-username" placeholder="Enter Instagram username">
+            <input type="password" id="instagram-password" placeholder="Enter Instagram password">
+            <button class="api-button" onclick="uploadInstagramPhoto()">Upload Photo</button>
+        </div>
+        <div class="confirmation-message" id="instagram-confirmation-message"></div>
+        <button class="api-button" onclick="goBack()">Back to Projects</button>
+    </section>
+    <!-- Input Form Section for Image Filters -->
+    <section id="image-filter" class="input-container">
+        <h2>Apply Image Filters</h2>
+        <div>
+            <input type="file" id="image-upload" accept="image/*">
+            <button class="api-button" onclick="applyImageFilter()">Apply Filters</button>
+        </div>
+        <div class="confirmation-message" id="filter-confirmation-message"></div>
+        <button class="api-button" onclick="goBack()">Back to Projects</button>
+    </section>
+    <!--input section for click photo-->
+    <section id="photo-capture-message" class="photo-capture-container" >
+        <h2>Capture Photo</h2>
+        <button onclick="capturePhoto()">Capture Photo</button>
+        <button class="api-button" onclick="goBack()">Back to Projects</button>
+    </section>
+    
+    <!--input section for voice to text convarter-->
+    <section id="speech-to-text-message" class="speech-to-text-container">
+        <h2>Speech to Text</h2>
+        
+        <button onclick="startSpeechToText()">Start Listening</button>
+        <button class="api-button" onclick="goBack()">Back to Projects</button>
+    </section>
+     <!--input section for vlc launch in linux-->
+    <section id="vlc-section" class="vlc-container input-container" style="display: none;">
+        <h2>Launch VLC Streaming</h2>
+        <div>
+            <input type="text" id="vlc-video-path" placeholder="Enter Video Path">
+            <input type="text" id="vlc-stream-url" placeholder="Enter Stream URL">
+            <button class="api-button" onclick="startVLCStreaming()">Start Streaming</button>
+        </div>
+        <div class="confirmation-message" id="vlc-confirmation-message"></div>
+        <button class="api-button" onclick="goBack()">Back to Projects</button>
+    </section>
+    <!--input section for click photo and transfer in linux-->
+    <section id="photo-capture-container" class="input-container">
+        <h2>Capture and Transfer Photo</h2>
+        <div>
+            <label for="remote-user">Remote User:</label>
+            <input type="text" id="remote-user" placeholder="Enter remote username">
+        </div>
+        <div>
+            <label for="remote-host">Remote Host:</label>
+            <input type="text" id="remote-host" placeholder="Enter remote host (e.g., 192.168.1.1)">
+        </div>
+        <div>
+            <label for="remote-path">Remote Path:</label>
+            <input type="text" id="remote-path" placeholder="Enter remote path (e.g., /home/user/photos)">
+        </div>
+        <button class="api-button" onclick="captureAndTransferPhoto()">Capture and Transfer</button>
+        <div class="confirmation-message" id="photo-capture-confirmation-message"></div>
+        <button class="api-button" onclick="goBack()">Back to Projects</button>
+    </section>
+    <!-- input section for live streming in linux -->
+    <section id="live-streaming-container" class="input-container">
+        <h2>Live Camera Streaming</h2>
+        <div>
+            <label for="stream-url">Stream URL:</label>
+            <input type="text" id="stream-url" placeholder="Enter streaming URL">
+        </div>
+        <div>
+            <label for="camera-device">Camera Device:</label>
+            <input type="text" id="camera-device" placeholder="Enter camera device (e.g., /dev/video0)">
+        </div>
+        <button class="api-button" onclick="startLiveStreaming()">Start Streaming</button>
+        <div class="confirmation-message" id="live-streaming-confirmation-message"></div>
+        <button class="api-button" onclick="goBack()">Back to Projects</button>
+    </section>
+    <!--input section for linux shortcut command-->
+    <section id="linux-shortcut-container" class="input-container">
+        <h2>Find Linux Shortcut Command</h2>
+        <div>
+            <label for="shortcut-keyword">Enter Command or Keyword:</label>
+            <input type="text" id="shortcut-keyword" placeholder="Enter keyword (e.g., copy, paste)" required>
+        </div>
+        <button class="api-button" onclick="findLinuxShortcut()">Find Shortcut</button>
+        <div class="confirmation-message" id="shortcut-result-message"></div>
+        <button class="api-button" onclick="goBack()">Back to Projects</button>
+    </section>
+    <!-- input section Modify the Speed and Voice of the espeak Command in Linux-->
+    <section class="espeak-container">
+        <h2>Enter espeak Parameters</h2>
+        <div>
+            <label for="espeak-text">Enter Text:</label>
+            <input type="text" id="espeak-text" placeholder="Enter text" required>
+        </div>
+        <div>
+            <label for="espeak-speed">Enter Speed:</label>
+            <input type="number" id="espeak-speed" placeholder="Enter speed (e.g., 150)" required>
+        </div>
+        <div>
+            <label for="espeak-voice">Enter Voice:</label>
+            <input type="text" id="espeak-voice" placeholder="Enter voice (e.g., en, default)" required>
+        </div>
+        <button class="api-button" onclick="modifyEspeak()">Run espeak</button>
+        <div class="confirmation-message" id="espeak-result-message"></div>
+        <button class="api-button" onclick="goBack()">Back to Projects</button>
+    </section>
+    <!--chating with ping command-->
+    <section id="ping-chat-container" class="input-container">
+        <h2>Chat via Ping Command</h2>
+        <div>
+            <label for="ping-address">Enter Address:</label>
+            <input type="text" id="ping-address" placeholder="Enter IP address" required>
+        </div>
+        <div>
+            <label for="ping-message">Enter Message:</label>
+            <input type="text" id="ping-message" placeholder="Enter message (e.g., hello, goodbye)" required>
+        </div>
+        <button class="api-button" onclick="sendPing()">Send Ping</button>
+        <div class="confirmation-message" id="ping-result-message"></div>
+        <button class="api-button" onclick="goBack()">Back to Projects</button>
+    </section>
+    <!--run python program in docker-->
+    <section id="docker-container" class="input-container" style="display: none;">
+        <h2>Run Python Program in Docker</h2>
+        <div>
+            <label for="docker-image">Enter Docker Image Name:</label>
+            <input type="text" id="docker-image" placeholder="Enter Docker image name (e.g., python:3.9)" required>
+        </div>
+        <div>
+            <label for="python-script">Enter Python Script Path:</label>
+            <input type="text" id="python-script" placeholder="Enter path to Python script (e.g., /path/to/script.py)" required>
+        </div>
+        <button class="api-button" onclick="runDockerProgram()">Run Program</button>
+        <div class="confirmation-message" id="docker-result-message"></div>
+        <button class="api-button" onclick="goBack()">Back to Projects</button>
+    </section>
+
+     <!-- Chat Form Container -->
+    <section id="chat-ai21-container" class="input-container">
+        <div class="message-container" id="message-container"></div>
+        <input type="text" id="input-text" placeholder="Type your message here...">
+        <button id="send-button">Send</button>
+        <button id="mic-button">🎤</button>
+        <div>
+            <button class="api-button" onclick="goBack()">Back to Projects</button>
+        </div>
+    </section>
+
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h3>Certificates</h3>
+            <div class="certificate-list">
+                <div class="certificate">
+                    <img src="certificate1.jpg" alt="Certificate 1">
+                    <p>Certificate Name 1</p>
+                </div>
+                <div class="certificate">
+                    <img src="certificate2.jpg" alt="Certificate 2">
+                    <p>Certificate Name 2</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h3>Contact Me</h3>
+            <p>Email: yugpratap2003@example.com</p>
+            <p>LinkedIn: linkedin.com/in/yug pratap anand</p>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
